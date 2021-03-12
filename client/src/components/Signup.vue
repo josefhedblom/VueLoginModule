@@ -43,7 +43,7 @@ export default {
         email: this.email,
         password: this.password
       }
-        axios.post('http://localhost:3000/signup',newUser)
+        axios.post('http://localhost:5000/signup',newUser)
         .then(response => {
           console.log(response.data);
           this.$router.push('/login');
