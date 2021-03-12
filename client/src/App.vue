@@ -1,14 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div id="nav">  
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/signup">Signup</router-link>  |
+      <router-link to="/secret">Secret</router-link> |
+      <a href="#" @click="logout">Logout</a>
     </div>
     <router-view/>
   </div>
 </template>
 
+
+<script>
+export default {
+  created(){
+      if(localStorage.getItem('token') === undefined){
+        this.$router.push('/login')
+      }
+  },
+  methods:{
+    logout(){
+      localStorage.clear();
+      this.$router.push('/login')
+    }
+  },
+}
+</script>
+
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
