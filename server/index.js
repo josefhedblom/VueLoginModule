@@ -12,6 +12,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
+const userRouter = require('./routes/users');
+app.use(userRouter);
+
 connectDB();
 
 const PORT = process.env.PORT || 3000;
