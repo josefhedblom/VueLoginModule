@@ -6,7 +6,7 @@ const dbString = process.env.DB;
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(dbString{
+        await mongoose.connect(dbString,{
             useCreateIndex: true,
             useFindAndModify: false,
             useNewUrlParser: true,

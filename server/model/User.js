@@ -8,7 +8,7 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: [true, "Username is required"],
         validate: [isAlpha, "Username can only contain letters"],
-        minlenght: [3, "Username must be a minumin length of 3 characters"],
+        minlength: [3, "Username must be a minumin length of 3 characters"],
         lowercase: true
     },
     email: {
