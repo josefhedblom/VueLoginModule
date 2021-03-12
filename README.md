@@ -18,7 +18,7 @@
 
 ### File Structure
 
-```tree
+```server
 .
 ├── config
 │   └── db.js
@@ -33,4 +33,30 @@
 ├── package.json
 └── routes
     └── users.js
+```
+
+```client
+.
+├── babel.config.js
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+└── src
+    ├── App.vue
+    ├── assets
+    │   └── logo.png
+    ├── components
+    │   ├── HelloWorld.vue
+    │   ├── Home.vue
+    │   ├── Login.vue
+    │   ├── Secret.vue
+    │   └── Signup.vue
+    ├── main.js
+    ├── router
+    │   └── index.js
+    └── views
+        ├── About.vue
+        └── Home.vue
 ```
